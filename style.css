@@ -1,0 +1,413 @@
+/* font url from google fonts   */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap');
+
+/*-------------------------
+ common css design
+ --------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #FFFAFA;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+li,
+a,
+button {
+    font-weight: 500;
+    font-size: 22px;
+    color: #555555;
+    text-decoration: none;
+}
+
+/*---------------------------
+ my navbar css design 
+----------------------------*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1% 7%;
+}
+
+.nav-logo {
+    margin-right: auto;
+    border-radius: 10%;
+    width: 100px;
+
+}
+
+.nav-main {
+    margin-right: 15px;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 25px;
+
+}
+
+.nav-links li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FF5C5C;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+#nav-btn {
+    padding: 5px 18px;
+}
+
+.btn {
+    background-color: #FBCEB1FF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    background-color: #FBCEB1CC;
+}
+
+/*-------------------------------------------
+ Home Page CSS  
+----------------------------------------------- */
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 8%;
+}
+
+.half-area {
+    width: 50%;
+    /* padding-left: 5%; */
+}
+
+.half-area img {
+    width: 90%;
+    min-height: 100%;
+    /* margin-left: 3%; */
+}
+
+.main-head {
+    margin-top: 35px;
+    font-size: 100px;
+    color: #242124;
+    font-weight: 700;
+}
+
+.logo-name {
+    color: #228B22;
+}
+
+.search-area {
+    margin-top: 20px;
+    width: 700px;
+    height: 60px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px #9e9e9e;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#search-input {
+    border: none;
+    position: relative;
+    border-radius: 12px;
+    font-size: 20px;
+    width: 700px;
+    height: 60px;
+}
+
+#search-btn {
+    margin-right: 20px;
+    padding-right: 40px;
+    padding-left: 10px;
+    z-index: 1;
+}
+
+.trending-sec {
+    margin-top: 60px;
+}
+
+.trending-btn {
+    background: #FFFAFA;
+    border: 2px solid #FF5C5C;
+    padding: 1px 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+/*--------------------------------
+ Product Page Design
+ ----------------------------------- */
+
+.product-img {
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient(#45454540, #45454540), url(images/product-fruits.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.product-intro {
+    width: 90%;
+    background: transparent;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.product-intro h1 {
+    font-size: 62px;
+    color: #ffffff;
+    background: transparent;
+}
+
+.product-intro p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: transparent;
+    margin: 10px 0 40px;
+}
+
+#product-btn {
+    margin-top: 2px;
+    padding: 3px 30px;
+    position: relative;
+}
+
+#product-btn:hover {
+    background: #228B22;
+    color: #ffffff;
+}
+
+.sec-intro h1 {
+    margin: 5% 10%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    color: #242124;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 80px;
+
+    margin: 5%;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 0 10%;
+}
+
+.single-product {
+    height: 650px;
+    width: 600px;
+    flex-basis: 32%;
+    /* border-radius: 20px; */
+    margin-bottom: 35px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.single-product:hover {
+    color: #FF5C5C;
+}
+
+.single-product img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* display: inline-block; */
+}
+
+.details {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-solid.fa-star {
+    font-size: 15px;
+}
+
+.fa-solid.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-solid.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.cart {
+    border: 1px solid #228B22;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+.cart:hover {
+    border: none;
+    background: #FF5C5C;
+    color: #FFFAFA;
+}
+
+.product-hover-name {
+    background: transparent;
+    height: 97.5%;
+    width: 100%;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.product-hover-name:hover {
+    background: #228B22Bf;
+}
+
+.product-hover-name h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 40px;
+    bottom: 40px;
+    position: absolute;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.product-hover-name:hover h3 {
+    bottom: 49%;
+    visibility: visible;
+}
+
+/*-------------------------------------------
+ footer section design
+---------------------------------------------  */
+
+footer {
+    margin-top: 115px;
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+    background-color: #242124;
+    color: #FFFAFA;
+}
+
+footer>h4 {
+    margin: 25px 0 30px 0;
+    font-weight: 600;
+}
+
+#follow {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fa-brands {
+    margin: 35px 15px;
+
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+.fa-twitter {
+    color: #00ACEE;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 7px;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+/*-----------------------------------
+Contact Page Design
+---------------------------------------  */
+
+.contact-bg {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(90deg, #00DBDE99, #FC00FF80), url(images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.contact-intro {
+    width: 90%;
+    background: transparent;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contact-intro h1 {
+    font-size: 62px;
+    color: #242124;
+    background: transparent;
+}
+
+.contact-head {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+hr {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.contact-address {
+    text-align: center;
+    font-size: 30px;
+}
+
+.fa-envelope {
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+.fa-phone {
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
